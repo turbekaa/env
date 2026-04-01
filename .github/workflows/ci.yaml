@@ -41,7 +41,7 @@ jobs:
           go test -race -cover -covermode=atomic -coverprofile=coverage.out \
             -count=1 -shuffle=on -timeout=12m ./...
       - name: Upload coverage
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v6
         with:
           files: coverage.out
           token: ${{ secrets.CODECOV_TOKEN }}
